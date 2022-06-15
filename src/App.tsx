@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container, Divider, Typography } from "@mui/material";
+import Spells from "./components/spells";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+      <Box textAlign="center" mb={3}>
+        <Typography mb={1} variant="h2" color="#950740">
+          Duengon & Dragons
+        </Typography>
+        <Typography fontWeight={500} variant="inherit" color="#4e4e50">
+          Duengon Dragons Spell Wiki
+        </Typography>
+      </Box>
+      <Divider sx={{ borderColor: "#950740" }} />
+      <Spells />
+    </Container>
   );
 }
 
